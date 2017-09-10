@@ -5,6 +5,7 @@ import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.format.Formatter;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -130,8 +131,8 @@ public class clientside extends AppCompatActivity {
         @Override
         public void run() {
             try {
-                Toast.makeText(getApplicationContext(), "When contact thread work",
-                        Toast.LENGTH_SHORT).show();
+//                Toast.makeText(this, "When contact thread work",Toast.LENGTH_SHORT).show();
+                Log.d("message","connect thread calls");
                 while (true){
                     InetAddress serverAddr =InetAddress.getByName(serverIpAddress);
                     Socket socket = new Socket(serverAddr, 10000);
